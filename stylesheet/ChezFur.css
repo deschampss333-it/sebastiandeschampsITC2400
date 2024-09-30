@@ -10,6 +10,32 @@ main {
     background-color: saddlebrown;
     color: gainsboro;
 }
+/*Header small screen rules including background image*/
+header {
+    background: 
+    url("../images/LogoSmall.png")
+    right top
+    no-repeat;
+    min-height: 50px
+}
+.maincat {
+    width: 50%;
+    height: auto;
+}
+.hissycat {
+    width: 10%;
+    height: auto;
+}
+.sponsorcat {
+    width: 5%;
+    height: auto;
+}
+.menucat {
+    width: 30%;
+    height: auto;
+}
+
+
 /* A different set of rules for large screens or screens whose minimum width is 750px */
 @media screen and (min-width: 750px)  {
     /*Different body background color, font color large screens.*/
@@ -20,5 +46,11 @@ main {
     /*A new header font family for large screens*/
     header {
         font-family:"Georgia";
+        /*New background image for the header, not a transparent image for some reason*/
+        background:
+        url("../images/LogoLarge.png")
+        right top
+        no-repeat;
+        min-height: 100px;
     }
 }
