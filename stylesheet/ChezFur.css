@@ -1,56 +1,191 @@
+/* The color palettes that I will be using
+The background color options
+#E7E0C9 and rgb(231, 224, 201) - A beige color
+#C1CFC0 and rgb(193, 207, 192) - A teal color
+#6B7AA1 and rgb(107, 122, 161) - A blue color
+#11324D and rgb(17, 50, 77) - A navy color
+A special color for aside that contrasts the navy color used in the main background
+#F5EBEB and rgb(245, 235, 235)
+And font colors with a high contrast ratio in their respective background
+#F7C566 and rgb(247, 197, 102) - An orange yellow color
+#6C0345 and rgb(108, 3, 69) - A maroon color
+#481E14 and rgb(72, 30, 20) - A brown color
+#0C0C0C and rgb(12, 12, 12) - A black color
+#990000 and rgb(153, 0, 0) - A red color
+#444444 and rgb(68, 68, 68) - A grey color
+Chez Fur is opening in this Fall, so using the 'Fall' tag on https://colorhunt.co/palettes/ suitable fall colors were searched for.
+The main attraction on Chez Fur is pictures of orange cats in the main sections so the goal was to find a color palette with a complementary blue color.
+In the end the color palette chosen was this one https://colorhunt.co/palette/e7e0c9c1cfc06b7aa111324d and navy was settled on the main background color because it is dark and easy to distinguish.
+The font color in the main background color was an orange with a high contrast ratio of 8.27 also because it match the orange cat photos.
+The body background colors were picked from the original palette and the two non blue colors were used to add more variety from the main section.
+The last font colors were mixed and matched from other fall palettes and were chosen because they needed to be dark to have a high contrast ratio score.
+The goal was to have some similarities in the different colors used for the small and large screen so you know it is the same site.
+The large screen body font has a 9.15 contrast score and the small screen body font has a 8.8 contrast score.
+Because the aside needed to be another contrasting color to the main navy another fall background color was mixed and matched.
+To keep the font at a high contrast the main background color was now used as the font color in the aside with a score of 11.31.
+Second to last, the blue color from the palette was selected for the div background colors so to use all the colors in the original palette.
+And another font color is found to give a better contrast ratio on the div font, with a 4.58 score, but because it is black it may change later.
+Lastly we have the colors for the links, I re used two colors for the visited links and found two new colors to match into the palette.
+The colors I re used are the header font colors swapping them for the small and large screens to give some continuity on the visited links.
+The large screen visited has a score of 10.8 and large screen unvisited has a score of 6.75.
+The small screen visited has a score of 7.45 and the small screen unvisited has a score of 6.*/
+
+
 /* Rules that will apply to all screen sizes below, will be applied so that small screens are designed first. */
+
 /*First body background, font color and family. */
 body {
-    background-color: peru;
-    color: bisque;
-    font-family:"Arial";
+    background-color: #C1CFC0;
+    color: #481E14;
+    font-family: "Arial";
 }
-/*Different background and font color for main section that includes paragraph. */
+
+/*Different background and font with a contrast ratio of 7.88 color for main section that includes paragraph. */
 main {
-    background-color: saddlebrown;
-    color: gainsboro;
+    background-color: #11324D;
+    color: #F7C566;
 }
+
+/* Aside with a contrasting color to the main background color, to match the contrast the font color in aside is the original main background color */
+aside {
+    background-color: #F5EBEB;
+    color: #11324D;
+}
+
 /*Header small screen rules including background image*/
 header {
-    background: 
-    url("../images/LogoSmall.png")
-    right top
-    no-repeat;
+    background:
+        url("../images/LogoSmall.png") right top no-repeat;
     min-height: 50px
 }
+
+/* List styling, removing bullet, setting size, and description list term and define bold and italic */
+ul {
+    list-style: none;
+}
+
+li {
+    font-size: 1.25em;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    font-style: italic;
+}
+
+/* Setting the bold figure caption and centering */
+figure {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Centering and using cursive font */
+.centeritalicheader {
+    text-align: center;
+    font-family: "Brush Script MT";
+}
+
+.bolditalicfont {
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* section clss that changes menu background color and width */
+.menudiv {
+    background-color: #6B7AA1;
+    color: #0C0C0C;
+    width: 80%;
+}
+
+/* host cats section with section background color, radius and width */
+.hostscatsdiv {
+    background-color: #6B7AA1;
+    border-radius: 10px;
+    width: 90%;
+}
+
+/* some size change when hovering only navigation links */
+nav a:hover {
+    font-size: xx-small;
+}
+
+/* font color and color change for small screens */
+a:link {
+    color: #444444;
+}
+
+a:visited {
+    color: #6C0345;
+}
+
+/* Cat pictures classes with scale and positioning*/
 .maincat {
     width: 50%;
+    max-width: 100%;
     height: auto;
 }
+
 .hissycat {
     width: 10%;
+    max-width: 100%;
     height: auto;
 }
+
 .sponsorcat {
     width: 5%;
+    max-width: 100%;
     height: auto;
 }
+
 .menucat {
     width: 30%;
+    max-width: 100%;
     height: auto;
+}
+
+.personalcat {
+    width: 80px;
+    height: 80px;
+    border-radius: 85px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
 /* A different set of rules for large screens or screens whose minimum width is 750px */
-@media screen and (min-width: 750px)  {
-    /*Different body background color, font color large screens.*/
+@media screen and (min-width: 750px) {
+
+    /*Different body background color, font color with a 9.15 contrast ratio for large screens.*/
     body {
-        background-color: maroon;
-        color: moccasin;
+        background-color: #E7E0C9;
+        color: #6C0345;
     }
+
     /*A new header font family for large screens*/
     header {
-        font-family:"Georgia";
+        font-family: "Georgia";
         /*New background image for the header, not a transparent image for some reason*/
         background:
-        url("../images/LogoLarge.png")
-        right top
-        no-repeat;
+            url("../images/LogoLarge.png") right top no-repeat;
         min-height: 100px;
+    }
+
+    /* font color and color change for large screens */
+    a:link {
+        color: #990000;
+    }
+
+    a:visited {
+        color: #481E14;
+    }
+
+    /* Larger screen size for host cat images */
+    .personalcat {
+        width: 180px;
+        height: 180px;
     }
 }
