@@ -6,6 +6,12 @@ The background color options
 #11324D and rgb(17, 50, 77) - A navy color
 A special color for aside that contrasts the navy color used in the main background
 #F5EBEB and rgb(245, 235, 235)
+Another background color for the nav list items in large screens
+#DBB5B5 and rgb(219, 181, 181)
+Background color for nav list items in small screens
+#E7E8D8 and rgb(231, 232, 216)
+A border color
+#F2613F and rgb(242, 97, 63)
 And font colors with a high contrast ratio in their respective background
 #F7C566 and rgb(247, 197, 102) - An orange yellow color
 #6C0345 and rgb(108, 3, 69) - A maroon color
@@ -50,6 +56,9 @@ main {
 aside {
     background-color: #F5EBEB;
     color: #11324D;
+    padding: 20px;
+    border-radius: 30px;
+    border: 5px solid #F2613F;
 }
 
 /*Header small screen rules including background image*/
@@ -91,6 +100,7 @@ figure {
 .bolditalicfont {
     font-weight: bold;
     font-style: italic;
+    text-align: center;
 }
 
 /* section clss that changes menu background color and width */
@@ -98,6 +108,8 @@ figure {
     background-color: #6B7AA1;
     color: #0C0C0C;
     width: 80%;
+    /* padding for small screen menu */
+    padding: 30px;
 }
 
 /* host cats section with section background color, radius and width */
@@ -120,6 +132,21 @@ a:link {
 a:visited {
     color: #6C0345;
 }
+
+/* navigation list for small screens, changing settings doesnt get same buttom effect as with large screens, width doesnt change background color box  */
+nav ul li {
+    display: inline;
+    margin-right: 8px;
+    background-color: #E7E8D8;
+    /* width: 175px; individual item width not working with inline style */
+    /* using padding to create button effect */
+    padding: 10px;
+    font-size: x-large;
+    font-family: "Lato";
+    text-align: center;
+}
+
+
 
 /* Cat pictures classes with scale and positioning*/
 .maincat {
@@ -182,6 +209,41 @@ a:visited {
     a:visited {
         color: #481E14;
     }
+
+    /* Button boxes for the nav list, needed to specify display list item after using display inline for small screens */
+    nav ul li {
+        margin-bottom: 20px;
+        background-color: #DBB5B5;
+        width: 80px;
+        text-align: center;
+        font-size: x-large;
+        display: list-item;
+        padding: 10px;
+
+    }
+
+    /* padding for large screen */
+    aside {
+        padding: 25px;
+    }
+
+    .menudiv {
+        padding: 75px;
+    }
+
+    /* creates columns with flex on all classes row */
+    .row {
+        display: flex;
+    }
+
+    .columnleft {
+        flex: 15%;
+    }
+
+    .columnright {
+        flex: 80%;
+    }
+
 
     /* Larger screen size for host cat images */
     .personalcat {
