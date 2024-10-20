@@ -19,110 +19,107 @@
         </h1>
         <h4>by Sebastian Deschamps</h4>
     </header>
-    <nav>
-        <!-- moved image as part of nav to create the column, didn't want to move nav list into main -->
-        <div class="row">
-            <div class="columnleft">
-                <!-- added navigation to be a part of an unordered list with each nav option a list item -->
-                <ul>
-                    <!--Navigation options with breaking space.-->
-                    <!--Anchors to link index Home, and new Menu, Your Hosts, Contact pages -->
-                    <li> <a href="../index.html">Home</a> </li>
-                    <li> <a href="menu.html">Menu</a> </li>
-                    <li> <a href="hosts.html">Your Hosts</a> </li>
-                    <li> <a href="contact.html">Contact</a> </li>
-                </ul>
-            </div>
-            <!--added image under same div in navigation to create a column with image and nav -->
-            <div class="columnright">
-                <img src="../images/catmaintwo.jpg" alt="Mr.OrangeCat" class="menucat column columnright">
-            </div>
-        </div>
-    </nav>
+    <div class="heroflex">
+        <nav class="navigationbox">
+            <!-- moved image as part of nav to create the column, didn't want to move nav list into main -->
+            <!--Navigation options with breaking space.-->
+            <!--Anchors to link index Home, and new Menu, Your Hosts, Contact pages -->
+            <a href="../index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="hosts.html">Your Hosts</a>
+            <a href="contact.html">Contact</a>
+            <!--MOVED HERO IMG BACK TO MAIN
+            added image under same div in navigation to create a column with image and nav -->
+            <!-- <div class="columnright">
+                <img src="../images/catmaintwo.jpg" alt="Mr.OrangeCat" class="menucat column columnright"> -->
+        </nav>
 
-    <main>
-        <!--Hero Image that scales when page is smaller-->
-        <!-- <div class="row">
+        <main>
+            <!--Hero Image that scales when page is smaller-->
             <img src="../images/catmaintwo.jpg" alt="Mr.OrangeCat" class="menucat column columnright">
-        </div> -->
-        <!--Reference
+            <!--Reference
             File:Garfield (8717284786).jpg - Wikimedia Commons. (2013, May 7). https://commons.wikimedia.org/wiki/File:Garfield_%288717284786%29.jpg-->
-        <!-- Have header from previous instructions, leaving in but unsure if it changes desired position of aside -->
-        <h2>
-            Food and Drink
-        </h2>
-        <!-- cretaed another div class row to make columns -->
-        <div class="row">
-            <div class="columnleft">
-                <!-- Aside with description -->
-                <aside>
-                    Enjoy our food while you visit with our friendly hosts! We have selections for appetites big and
-                    small.
-                </aside>
+            <!-- Have header from previous instructions, leaving in but unsure if it changes desired position of aside -->
+            <h2>
+                Food and Drink
+            </h2>
+            <!-- cretaed another div class row to make columns -->
+            <div class="row">
+                <div class="columnleft">
+                    <!-- Aside with description -->
+                    <aside>
+                        Enjoy our food while you visit with our friendly hosts! We have selections for appetites big and
+                        small.
+                    </aside>
+                </div>
+                <div class="menudiv columnright">
+                    <!-- was originally a H1 under section but received warning in validator and want to keep H1 -->
+                    <h1 class="centeritalicheader">
+                        Menu
+                    </h1>
+                    <!-- Menu food and drink options -->
+                    <ul>
+                        <li>
+                            Nibbles
+                            <dl>
+                                <dt>Chicken Meatballs</dt>
+                                <dd>Chicken comes from our owners personal free range chicken farm. Stewed and baked
+                                    with
+                                    chicken broth. $6</dd>
+                                <dt>Russian Salad</dt>
+                                <dd>Classic russian salad. $5</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            Fancy Feasts
+                            <dl>
+                                <dt>Lasagna</dt>
+                                <dd>Our Chef Garfield's favorite dish, available any day of the week and half off on
+                                    Monday.
+                                    $8
+                                </dd>
+                                <dt>Orange Tomatoes w/ Tuna Belly</dt>
+                                <dd>Freshly picked orange tomatoes from our resident tomato trees. Our tuna belly filets
+                                    are
+                                    imported from japan and are soaked in olive oil. $14</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            Treats
+                            <dl>
+                                <dt>Orange Popsicle</dt>
+                                <dd>MMM frozen popsicles made from our signature orange soda. $3</dd>
+                                <dt>Carrot Cake</dt>
+                                <dd>A slice of delicous carrot cake from our limited one cake per day supply, make sure
+                                    to
+                                    order
+                                    early in the day before its out! $7</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            Drink
+                            <dl>
+                                <dt>Orange Breakfast Tea</dt>
+                                <dd>Home made yummy twist on English breakfast tea. Our fresh bergamont is an experience
+                                    that
+                                    will levitate your soul! $5 </dd>
+                                <dt>Orange Soda</dt>
+                                <dd>Classic orange flavored soda. Made from tang. A customer favorite! $4</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="menudiv columnright">
-                <!-- was originally a H1 under section but received warning in validator and want to keep H1 -->
-                <h1 class="centeritalicheader">
-                    Menu
-                </h1>
-                <!-- Menu food and drink options -->
-                <ul>
-                    <li>
-                        Nibbles
-                        <dl>
-                            <dt>Chicken Meatballs</dt>
-                            <dd>Chicken comes from our owners personal free range chicken farm. Stewed and baked with
-                                chicken broth. $6</dd>
-                            <dt>Russian Salad</dt>
-                            <dd>Classic russian salad. $5</dd>
-                        </dl>
-                    </li>
-                    <li>
-                        Fancy Feasts
-                        <dl>
-                            <dt>Lasagna</dt>
-                            <dd>Our Chef Garfield's favorite dish, available any day of the week and half off on Monday.
-                                $8
-                            </dd>
-                            <dt>Orange Tomatoes w/ Tuna Belly</dt>
-                            <dd>Freshly picked orange tomatoes from our resident tomato trees. Our tuna belly filets are
-                                imported from japan and are soaked in olive oil. $14</dd>
-                        </dl>
-                    </li>
-                    <li>
-                        Treats
-                        <dl>
-                            <dt>Orange Popsicle</dt>
-                            <dd>MMM frozen popsicles made from our signature orange soda. $3</dd>
-                            <dt>Carrot Cake</dt>
-                            <dd>A slice of delicous carrot cake from our limited one cake per day supply, make sure to
-                                order
-                                early in the day before its out! $7</dd>
-                        </dl>
-                    </li>
-                    <li>
-                        Drink
-                        <dl>
-                            <dt>Orange Breakfast Tea</dt>
-                            <dd>Home made yummy twist on English breakfast tea. Our fresh bergamont is an experience
-                                that
-                                will levitate your soul! $5 </dd>
-                            <dt>Orange Soda</dt>
-                            <dd>Classic orange flavored soda. Made from tang. A customer favorite! $4</dd>
-                        </dl>
-                    </li>
-                </ul>
+            <div class="bolditalicfont">
+                Please let us know if you have any allergies or food sensitivities.
             </div>
-        </div>
-        <div class="bolditalicfont">
-            Please let us know if you have any allergies or food sensitivities.
-        </div>
-        <h4>
-            Chez Fur by Sebastian Deschamps
-        </h4>
-        <br>
-        <br>
-    </main>
+            <h4>
+                Chez Fur by Sebastian Deschamps
+            </h4>
+            <br>
+            <br>
+        </main>
+    </div>
 
     <footer>
         <!--Footer detaling contact info.-->

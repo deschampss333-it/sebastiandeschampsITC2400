@@ -20,45 +20,68 @@
         <h4>by Sebastian Deschamps</h4>
     </header>
 
-    <nav>
-        <!-- added navigation to be a part of an unordered list with each nav option a list item -->
-        <ul>
-            <!--Navigation options with breaking space.-->
+    <div class="heroflex">
+        <nav class="navigationbox">
+            <!-- added navigation to be a part of an unordered list with each nav option a list item -->
             <!--Anchors to link index Home, and new Menu, Your Hosts, Contact pages -->
-            <li> <a href="../index.html">Home</a> </li>
-            <li> <a href="menu.html">Menu</a> </li>
-            <li> <a href="hosts.html">Your Hosts</a> </li>
-            <li> <a href="contact.html">Contact</a> </li>
-        </ul>
-    </nav>
+            <a href="../index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="hosts.html">Your Hosts</a>
+            <a href="contact.html">Contact</a>
+        </nav>
 
-    <main>
-        <!--Hero Image, here we use the sponsor logo that scales when page is smaller that includes a hyperlink-->
-        <a href="https://www.houstonhumane.org/">
-            <img src="../images/sponsorLogo.jpg" alt="SponsorWithALink" class="sponsorcat">
-        </a>
-        <!-- Figures with personal cat photos as hosts and their names -->
-        <!-- Originally wanted to use section but dont think another header is necessary -->
-        <div class="hostscatsdiv">
-            <figure>
-                <img src="../images/personalcatone.jpg" alt="KittyReadyToPounce" class="personalcat">
-                <figcaption>Mr.ThingOne</figcaption>
-            </figure>
-            <figure>
-                <img src="../images/personalcattwo.jpg" alt="KittyOfTheHill" class="personalcat">
-                <figcaption>Mr.ThingTwo</figcaption>
-            </figure>
-            <figure>
-                <img src="../images/personalcatthree.jpg" alt="SmallBlackKitty" class="personalcat">
-                <figcaption>Mr.DarkMagician</figcaption>
-            </figure>
-        </div>
-        <h4>
-            Chez Fur by Sebastian Deschamps
-        </h4>
-        <br>
-        <br>
-    </main>
+        <main>
+            <!--Hero Image, here we use the sponsor logo that scales when page is smaller that includes a hyperlink-->
+            <div class="flexgallery">
+                <a href="https://www.houstonhumane.org/">
+                    <img src="../images/sponsorLogo.jpg" alt="SponsorWithALink" class="sponsorcat">
+                </a>
+                <a href="https://www.houstonhumane.org/">
+                    <img src="../images/sponsorLogo.jpg" alt="SponsorWithALink" class="sponsorcat">
+                </a>
+                <a href="https://www.houstonhumane.org/">
+                    <img src="../images/sponsorLogo.jpg" alt="SponsorWithALink" class="sponsorcat">
+                </a>
+            </div>
+            <!-- Figures with personal cat photos as hosts and their names -->
+            <!-- Originally wanted to use section but dont think another header is necessary, added class to cuztomize flexbox -->
+            <div class="hostscatsdiv flexgallery">
+                <figure>
+                    <img src="../images/personalcatone.jpg" alt="KittyReadyToPounce" class="personalcat">
+                    <figcaption>Mr.ThingOne</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/personalcattwo.jpg" alt="KittyOfTheHill" class="personalcat">
+                    <figcaption>Mr.ThingTwo</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/personalcatthree.jpg" alt="SmallBlackKitty" class="personalcat">
+                    <figcaption>Mr.DarkMagician</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/gallerycatone.jpg" alt="HungryAndMessyKitty" class="personalcat">
+                    <figcaption>Mr.Hungry</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/gallerycattwo.jpeg" alt="RelaxingKitty" class="personalcat">
+                    <figcaption>Mr.LazyKitty</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/gallerycatthree.jpg" alt="CafeCat" class="personalcat">
+                    <figcaption>Mr.CoffeeCat</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/gallerycatfour.jpg" alt="BlueEyes" class="personalcat">
+                    <figcaption>Mr.BlueEyes</figcaption>
+                </figure>
+            </div>
+            <h4>
+                Chez Fur by Sebastian Deschamps
+            </h4>
+            <br>
+            <br>
+        </main>
+    </div>
 
     <footer>
         <!--Footer detaling contact info.-->
