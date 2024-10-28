@@ -202,6 +202,46 @@ nav a {
     margin-right: auto;
 }
 
+/* Grid for gallery of adoptions cats, 2x4 for large screens */
+.adoptagrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+/* Long and wide images are placed in the grid, one square image placed the rest square images fit into area on own */
+.longgridimage {
+    grid-area: 2 / 1 / 4 / 2;
+}
+
+.widegridimage {
+    grid-area: 1 / 1 / 3 / 3;
+}
+
+.gridimagethree {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+/* Scaling of grid images so they fit on screen better */
+.longgridcat {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.squaregridcat {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.widegridcat {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
 
 /* A different set of rules for large screens or screens whose minimum width is 750px */
 @media screen and (min-width: 750px) {
@@ -281,5 +321,22 @@ nav a {
     .personalcat {
         width: 180px;
         height: 180px;
+    }
+
+    /* Grid for gallery of adoptions cats, 3x3 for large screens */
+    .adoptagrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 10px;
+    }
+
+    /* Long and wide images are placed in the grid, the rest square images fit into area on own */
+    .longgridimage {
+        grid-area: 1 / 1 / 3 / 2;
+    }
+
+    .widegridimage {
+        grid-area: 3 / 1 / 3 / 3;
     }
 }
