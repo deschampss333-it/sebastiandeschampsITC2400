@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+/*Separate CSS stylesheet for the dreamweaver page. Was unable to successfully integrate the bootstrap features from dreamweaver with the navigation color scheme from the previous pages. There are still separate small and large screen rules for the background and font.*/
+
+/*Set background and font to match original Chez Fur design choices in dreamweaver page, navigation is a part of bootstrap cant change colors*/
+
+body {
+    background-color: #C1CFC0;
+    color: #481E14;
+    font-family: "Arial";
+}
+
+/*Different background and font with a contrast ratio of 7.88 color for main section that includes paragraph. */
+main {
+    background-color: #11324D;
+    color: #F7C566;
+    height: 100vh;
+    overflow: scroll;
+}
+
+
+/*Header small screen rules including background image*/
+header {
+    background:
+        url("../../images/LogoSmall.png") right top no-repeat;
+    min-height: 50px
+}
+/* some size change when hovering only navigation links */
+nav a:hover {
+    font-size: xx-small;
+}
+
+/*Background and color changes for large screens, kept 750 size to work with bootstrap*/
+@media screen and (min-width: 750px) {
+	body {
+        background-color: #E7E0C9;
+        color: #6C0345;
+    }
+
+    /*A new header font family for large screens*/
+	header {
+        font-family: "Georgia";
+        /*New background image for the header*/
+        background:
+            url("../../images/LogoLarge.png") right top no-repeat;
+        min-height: 100px;
+    }	
+}
