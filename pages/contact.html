@@ -38,6 +38,76 @@
             <img src="../images/catmainfour.jpg" alt="Mr.HissyCat" class="hissycat">
             <!--Reference
             File:Gatto Garfield.jpg - Wikimedia Commons. (2008, October 4). https://commons.wikimedia.org/wiki/File:Gatto_Garfield.jpg-->
+            <p>
+                Let us know how to contact you with the answers you need.
+                <br>
+                <br>
+                Please don't be shy to visit us in person and speak with a staff member about any concerns. We also have
+                a comments and concern box where you may drop in any note. We review these daily! You may also email
+                Chez Fur, mail to our address, or leave a voice message at any time. Further contact addresses are at
+                the bottom of the page. Below are our online forms, please take a moment to fill out and that way this
+                will let us know the best way to get back to you.
+                <br>
+                <br>
+                Thank you for your interest in Chez Fur!
+            </p>
+            <h1>
+                Contact Form
+            </h1>
+            <p>Please provide your information below</p>
+            <!-- Form with divisions to allow for easy CSS customization -->
+            <div class="formContain">
+                <form action="https://webdevbasics.net/scripts/demo.php" method="post">
+                    <div class="formRow">
+                        <div class="col-25">
+                            <label for="Name">Name</label>
+                        </div>
+                        <div class="col-75">
+                            <input name="Name" id="Name" type="text" required>
+                        </div>
+                    </div>
+                    <div class="formRow">
+                        <div class="col-25">
+                            <label for="E-mail">E-mail</label>
+                        </div>
+                        <div class="col-75">
+                            <input name="E-mail" id="E-mail" type="email" placeholder="example@email.com" required>
+                        </div>
+                    </div>
+                    <div class="formRow">
+                        <div class="col-25">
+                            <label for="Phone">Phone</label>
+                        </div>
+                        <div class="col-75">
+                            <input name="Phone" id="Phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                placeholder="xxx-xxx-xxxx" required>
+                        </div>
+                    </div>
+                    <div class="formRow">
+                        <div class="col-25">
+                            <label for="Preferred">Preferred Contact</label>
+                        </div>
+                        <div class="col-75">
+                            <select name="Preferred Contact" id="Preferred">
+                                <option value="E-mail me">E-mail me</option>
+                                <option value="Phone me between 1PM - 4PM">Phone me between 1PM - 4PM</option>
+                                <option value="Phone me between 6PM - 9PM">Phone me between 6PM - 9PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="formRow">
+                        <div class="col-25">
+                            <label for="Question">Question or Concern?</label>
+                        </div>
+                        <div class="col-75">
+                            <input name="Question or Concern?" id="Question" type="text">
+                        </div>
+                    </div>
+                    <div class="formRow">
+                        <input type="submit" value="Send Now!">
+                    </div>
+                </form>
+            </div>
             <h4>
                 Chez Fur by Sebastian Deschamps
             </h4>
@@ -59,7 +129,15 @@
         Copyright © 2024 Sebastian Deschamps
         <br>
         <a href="mailto:sebastian@chezfur.com">Email sebastiandeschamps</a>
+        <p id="date"></p>
     </footer>
+
+    <script>
+        const d = new Date();
+        document.getElementById("date").innerHTML = d;
+    </script>
 </body>
+
+
 
 </html>

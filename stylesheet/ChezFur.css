@@ -242,6 +242,88 @@ nav a {
     height: auto;
 }
 
+/* Increased margins to remove floating columns for now, stacking the form options is the desired result */
+.col-25 {
+    float: left;
+    width: 55%;
+    margin-top: 6px;
+    margin-left: 20px;
+    font-size: larger;
+    color: #0C0C0C;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+    margin-left: 15px;
+    color: #0C0C0C;
+}
+
+/* Clear floats after the columns */
+.formRow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.formContain {
+    background-color: #6B7AA1;
+    color: #0C0C0C;
+    border-radius: 30px;
+    border: 5px solid #F2613F;
+}
+
+/* Green submit button that changes when hovering over */
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 20px 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #F2613F;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+input[type=email],
+select,
+textarea {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #F2613F;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+input[type=tel],
+select,
+textarea {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #F2613F;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+
+
 
 /* A different set of rules for large screens or screens whose minimum width is 750px */
 @media screen and (min-width: 750px) {
