@@ -24,8 +24,15 @@ h4 {
     text-align: center;
 }
 
-body {
+main {
     background-color: #B59F78;
+    color: #0A3981;
+    height: 100vh;
+    overflow: scroll;
+}
+
+body {
+    background-color: #F8F9FA;
     color: #0A3981;
 }
 
@@ -107,7 +114,7 @@ label {
 .slipOnGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repease(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
 }
 
 .slipGridOne {
@@ -123,9 +130,57 @@ label {
     grid-area: 1 / 4 / 1 / 1;
 }
 
+@media screen and (min-width: 750px) {
 
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .shoeGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .longShoe {
+        grid-area: 1 / 1 / 3 / 2;
+    }
+
+    .kotaSquareOne {
+        grid-area: 2 / 4 / 3 / 2;
+    }
+
+    .kotaSquareTwo {
+        grid-area: 1 / 3 / 1 / 3;
+    }
+
+    .kotaSquareThree {
+        grid-area: 1 / 2 / 1 / 2;
+    }
+
+    .kotaSquareFour {
+        grid-area: 2 / 4 / 3 / 3;
+    }
+
+    .shoppingGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+}
 
 @media screen and (min-width: 950px) {
+    main {
+        background-color: #FFF0D1;
+    }
+
+    body {
+        background-color: #C1C1CB;
+    }
+
     .shopGallery {
         display: flex;
         flex-direction: row;
@@ -137,8 +192,6 @@ label {
         margin-left: auto;
         margin-right: auto;
     }
-
-    .shopSlip {}
 
     header {
         background: url("../images/kotaLogo.jpeg") center no-repeat;
@@ -157,53 +210,4 @@ label {
         justify-content: center;
 
     }
-
-
-
-    @media screen and (min-width: 750px) {
-        .shopGallery {}
-
-
-
-
-        .col-25,
-        .col-75,
-        input[type=submit] {
-            width: 100%;
-            margin-top: 0;
-        }
-
-        .shoeGrid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-        }
-
-        .longShoe {
-            grid-area: 1 / 1 / 3 / 2;
-        }
-
-        .kotaSquareOne {
-            grid-area: 2 / 4 / 3 / 2;
-        }
-
-        .kotaSquareTwo {
-            grid-area: 1 / 3 / 1 / 3;
-        }
-
-        .kotaSquareThree {
-            grid-area: 1 / 2 / 1 / 2;
-        }
-
-        .kotaSquareFour {
-            grid-area: 2 / 4 / 3 / 3;
-        }
-
-        .shoppingGrid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(1, 1fr);
-        }
-
-
-    }
+}
