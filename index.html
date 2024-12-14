@@ -9,15 +9,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> Kota Biodynamics </title>
 </head>
+<!-- All bootstrap elements and original individual stylesheet get loaded in-->
 
 <body style="padding-top: 70px">
+    <!-- Simple header with spacing to place text around image. -->
     <header>
-        <h1>&nbsp;</h1>
-        <h1>&nbsp;</h1>
-        <h1>&nbsp;</h1>
-        <h1>&nbsp;</h1>
         <h1>KOTA Biodynamics</h1>
+        <h1>&nbsp;</h1>
+        <h1>&nbsp;</h1>
+        <h1>&nbsp;</h1>
     </header>
+    <!-- Navigation bar is taken from a bootstrap navigation element in Dreamweaver. I wanted to use a navigation that had a 
+     hamburger helper menu and this achieved that goal. Many elements were taken out like dropdown and search bar. 
+     Navigation is also fixed to top of the screen. -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light"> <a class="navbar-brand" href="#">KOTANav</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
             aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span
@@ -36,18 +40,26 @@
         </div>
     </nav>
     <main>
+        <!-- Main area on homepage has two videos, meant to get the attention of a visitor and make them interested.
+         Then it is followed by simple opening logo text and welcome. -->
         <iframe src="media/kotaJump.mp4" name="kotaCliffJumpClip"></iframe>
         <p>
             [bi·o·dy·nam·ics] the study of physical motion or dynamics in living systems.
+            <br>
+            Welcome! Please stay and explore to learn more about KOTA and our shoes.
         </p>
         <iframe src="media/kotaSkating.mp4" name="kotaSkateClip"></iframe>
 
     </main>
     <footer>
+        <!-- footer includes a few links for email, and instagram embeded and homepage logo. The footer
+         also includes a script for the date -->
         <br>
-        Contact Us
+        Today is
         <p id="date"></p>
-        <a href="mailto:kota.bio@proton.me">Email KOTA Biodynamics</a>
+        <a href="mailto:kota.bio@proton.me">Have something to say? Email KOTA Biodynamics</a>
+        <br>
+        Please check out our Instagram!
         <br>
         <a href="https://www.instagram.com/kota.bio/">
             <img src="images/instaIcon.png" alt="InstagramLink" width="50" height="50" class="footerLogo">
@@ -55,6 +67,7 @@
         <a href="index.html">
             <img src="images/kotaLogoSquare.jpeg" alt="kotaWriting" width="50" height="50" class="footerLogo">
         </a>
+        KOTA Biodynamics ©
     </footer>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/popper.min.js"></script>

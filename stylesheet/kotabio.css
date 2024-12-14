@@ -1,29 +1,31 @@
-/* https://colorhunt.co/palette/faf6e3d8dbbdb59f782a3663
-    https://colorhunt.co/palette/89a8b2b3c8cfe5e1daf1f0e8
-    https://colorhunt.co/palette/d4ebf81f509a0a3981e38e49
-    Orange
-    Blue
-    Medium Blue
-    Light Blue D4EBF8   */
+/* For the color palete we wanted to work with the same font color from the logo, use gray similar to the logo background,
+and then choose a color that is similar to a light brown/tobacco color. Thats how we decided which colors to use, and kept the
+gray in the header with the logo, the light brown in the body.*/
 
 
+/* iframe that has a customized height for homepage videos */
 iframe {
     border: none;
     width: 100%;
     height: 480px;
 }
 
+/* header with logo, size set and placed to be aligned with text */
 header {
     background: url("../images/kotaLogo.jpeg") left no-repeat;
     background-size: 150px 150px;
     min-height: 220px;
     text-align: left;
+    font-family: Magneto;
 }
 
+/* text align for header text */
 h4 {
     text-align: center;
 }
 
+/* setting the main background and text colors, also setting a window here for scroll with overflow, used this 
+because it works well with placing images */
 main {
     background-color: #B59F78;
     color: #0A3981;
@@ -36,16 +38,19 @@ body {
     color: #0A3981;
 }
 
+/* figure text customization */
 figure {
     font-weight: bold;
     text-align: center;
 }
 
+/* border for grid where we placed form items for adding to cart */
 .shoppingGrid {
     border-radius: 20px;
     border: 5px solid #F2613F;
 }
 
+/* customization for the footer logos */
 .footerLogo {
     width: 80px;
     height: 80px;
@@ -53,6 +58,7 @@ figure {
     display: block;
 }
 
+/* customizing images used for options in shop */
 .shopOption {
     width: 480px;
     height: 480px;
@@ -62,6 +68,7 @@ figure {
     margin-right: auto;
 }
 
+/* customizing form elements */
 input[type=text],
 select,
 textarea {
@@ -111,6 +118,10 @@ label {
     clear: both;
 }
 
+/* form changes display and moves elements around for different screen sizes */
+
+
+/* creating a grid to place images */
 .slipOnGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -130,6 +141,20 @@ label {
     grid-area: 1 / 4 / 1 / 1;
 }
 
+.shoeGrid {
+    display: flex;
+    flex-direction: column;
+}
+
+/* background and text for mission statement  */
+.missionPad {
+    background-color: #B59F78;
+    border-radius: 12px;
+    box-shadow: 0 10px 2px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+}
+
+/* first set of media screen rules */
 @media screen and (min-width: 750px) {
 
     .col-25,
@@ -139,75 +164,97 @@ label {
         margin-top: 0;
     }
 
+    /* using flex for simpler image placement */
     .shoeGrid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        display: flex;
+        flex-direction: row;
     }
 
-    .longShoe {
-        grid-area: 1 / 1 / 3 / 2;
-    }
-
-    .kotaSquareOne {
-        grid-area: 2 / 4 / 3 / 2;
-    }
-
-    .kotaSquareTwo {
-        grid-area: 1 / 3 / 1 / 3;
-    }
-
-    .kotaSquareThree {
-        grid-area: 1 / 2 / 1 / 2;
-    }
-
-    .kotaSquareFour {
-        grid-area: 2 / 4 / 3 / 3;
-    }
-
+    /* grid to place shopping form options on */
     .shoppingGrid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(1, 1fr);
     }
-}
 
-@media screen and (min-width: 950px) {
-    main {
-        background-color: #FFF0D1;
-    }
-
-    body {
-        background-color: #C1C1CB;
-    }
-
-    .shopGallery {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-
-    .footerLogo {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    header {
-        background: url("../images/kotaLogo.jpeg") center no-repeat;
-        background-size: 150px 150px;
-        min-height: 220px;
-        text-align: center;
-    }
-
-    .ShoeBox {
-        display: flex;
-    }
-
+    /* flex for this size */
     .slipOnGrid {
         display: flex;
-        flex-direction: row-reverse;
-        justify-content: center;
+        flex-direction: column;
+    }
+
+    @media screen and (min-width: 950px) {
+
+        /* different colors for this size range */
+        main {
+            background-color: #FFF0D1;
+        }
+
+        body {
+            background-color: #C1C1CB;
+        }
+
+        /* placing shop options */
+        .shopGallery {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .footerLogo {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* logo moves to center on larger screens */
+        header {
+            background: url("../images/kotaLogo.jpeg") center no-repeat;
+            background-size: 150px 150px;
+            min-height: 220px;
+            text-align: center;
+        }
+
+        /* shoe images in first shoe option*/
+        .shoeBox {
+            display: flex;
+        }
+
+        /* shoe images in slip on option*/
+        .slipOnGrid {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+
+        }
+
+        /* creates a grid to place images */
+        .shoeGrid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        /* placing images */
+        .longShoe {
+            grid-area: 1 / 1 / 3 / 2;
+        }
+
+        .kotaSquareOne {
+            grid-area: 2 / 4 / 3 / 2;
+        }
+
+        .kotaSquareTwo {
+            grid-area: 1 / 3 / 1 / 3;
+        }
+
+        .kotaSquareThree {
+            grid-area: 1 / 2 / 1 / 2;
+        }
+
+        .kotaSquareFour {
+            grid-area: 2 / 4 / 3 / 3;
+        }
 
     }
 }
